@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,24 +7,28 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="grid-container">
-    <nav class="menu" data-menu="suave">
-      <img src="img/logo-mhf.png" alt="Logo">
-      <ul data-menu="list" id="menu">
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#faq">Faq</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
+  
+  <header class="header-bg">
+      <div class="header container">
+        <img src="img/mhf-logo.png" alt="Logo">
+      <nav>
+        <ul class="header-menu" id="menu">
+          <li><a class="menu-link" href="#sobre">Sobre</a></li>
+          <li><a class="menu-link" href="#faq">FAQ</a></li>
+          <span>
+          <li><a class="botao" href="#contato">Contato</a></li>
+          </span>
+        </ul>
+      </div>
     </nav>
 
-    <section class="grid-section header" id="header">
-      <div class="background">
-        <img src="img/background-header.png" alt="Fundo Header">
-        <h1 class="titulo">Maria Helena Fernandes</h1>
-        <h2 class="subtitulo">Advocacia Previdenciária</h2>
-      </div>
-      <span class="balanca-icone"><img src="/img/balança-icon.png" alt="Ícone Balança"></span>
-    </section>
+    <div class="background">
+      <img src="img/background-header.png" alt="Fundo Header">
+      <h1 class="titulo">Maria Helena Fernandes</h1>
+      <h2 class="subtitulo">Advocacia Previdenciária</h2>
+    </div>
+    <span class="balanca-icone"><img src="/img/balança-icon.png" alt="Ícone Balança"></span>
+  </header>
   
 
     <section class="grid-section atuacao">
@@ -156,7 +160,6 @@
       </div>
     </footer>
       
-  </div>
   <script src="script.js"></script>
 </body>
 </html>

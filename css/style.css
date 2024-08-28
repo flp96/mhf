@@ -1,3 +1,108 @@
+body, h1, h2, h3, ul, li, p, dd, dt, dl {
+  margin: 0px;
+  padding: 0px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background: #292929;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 1600px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header-bg {
+  background: #141414;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.header img {
+  max-height: 200px;
+  max-width: 200px;
+}
+
+.header-menu {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.header-menu li {
+  padding: 20px;
+  font-size: 1.25rem;
+  display: inline-block;
+}
+
+.header-menu a {
+  text-decoration: none;
+  padding: 16px 0;
+  display: inline-block;
+  color: #fff;
+  position: relative;
+}
+
+.header-menu .menu-link::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0px;
+  background: #fff;
+  margin-top: 4px;
+  transition: 0.3s;
+  position: absolute;
+}
+
+.header-menu .menu-link:hover::after {
+  width: 100%;
+}
+
+.header-menu .botao{ 
+  background: #fb5;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  border: none;
+  color: #292929;
+  border-radius: 4px;
+  font-weight: bold;
+  padding: 16px 24px;
+  cursor: pointer;
+}
+
+.header-menu .botao:hover {
+  color: #fff;
+}
+
+
+/** Background **/
+
+.background img {
+  background-size: cover;
+}
+
 .atuacao .item-1 span {
   display: flex;
   width: 160px;

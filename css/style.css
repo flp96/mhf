@@ -99,9 +99,42 @@ body {
 
 /** Background **/
 
-.background img {
+.background {
+  position: relative;
+  background-image: url(/img/background-main.png);
   background-size: cover;
+  height: 740px;
 }
+
+.background .background-titulo {
+  position: absolute;
+  margin-top: 320px;
+  margin-left: 180px;
+  text-transform: uppercase;
+  border-left: 8px solid #fb5;
+  padding-left: 10px;
+}
+
+
+
+.background h1 {
+  font-size: calc(1rem + 2.5vw);
+  line-height: 1.0;
+  color: #fff;
+}
+
+.background h2 {
+  font-size: calc(1rem + 1vw);
+  color: #fb5;
+}
+
+.header-bg .balanca-icone img{
+  left: 50%;
+  bottom: -25px;
+  position: absolute;
+}
+
+/** **/
 
 .atuacao .item-1 span {
   display: flex;

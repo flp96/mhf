@@ -6,7 +6,7 @@ body, h1, h2, h3, ul, li, p, dd, dt, dl {
 img {
   display: block;
   max-width: 100%;
-  cursor: pointer;
+  height: auto;
 }
 
 ul {
@@ -34,7 +34,6 @@ body {
 .header {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
   justify-content: space-between;
   align-items: center;
   padding-top: 20px;
@@ -53,6 +52,7 @@ body {
 }
 
 .header-menu li {
+  font-family: 'Poppins', sans-serif;
   padding: 20px;
   font-size: 1.25rem;
   display: inline-block;
@@ -61,7 +61,6 @@ body {
 .header-menu a {
   text-decoration: none;
   padding: 16px 0;
-  display: inline-block;
   color: #fff;
   position: relative;
 }
@@ -74,7 +73,6 @@ body {
   background: #fff;
   margin-top: 4px;
   transition: 0.3s;
-  position: absolute;
 }
 
 .header-menu .menu-link:hover::after {
@@ -87,9 +85,23 @@ body {
   border: none;
   color: #292929;
   border-radius: 4px;
-  font-weight: bold;
   padding: 16px 24px;
   cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .header img {
+    max-height: 50px;
+    max-width: 50px;
+}
+  .header-menu .botao{ 
+    padding: 10px 15px;
+  }
+  .header-menu li {
+    font-size: 1rem;
+    padding: 12px;
+    align-items: center;
+  }
 }
 
 .header-menu .botao:hover {
@@ -98,50 +110,75 @@ body {
 
 /** Background **/
 
-.background {
+.background-container {
   position: relative;
-  background-image: url(/img/background-main.png);
-  background-size: cover;
-  height: 740px;
 }
 
-.background .background-titulo {
-  position: absolute;
-  margin-top: 320px;
+.background {
+  display: grid;
+  align-items: center;
+  background-image: url(/img/background-main.png);
+  background-size: cover;
+  height: 700px;
+}
+
+.background-titulo {
   margin-left: 180px;
   text-transform: uppercase;
   border-left: 8px solid #fb5;
   padding-left: 12px;
 }
 
-
-
 .background h1 {
   font-size: calc(1rem + 2.5vw);
-  line-height: 1.0;
   color: #fff;
+  font-family: 'Crimson Text', serif;
 }
 
 .background h2 {
   font-size: calc(1rem + 1vw);
   color: #fb5;
+  font-family: 'Crimson Text', serif;
+  font-style: italic;
 }
 
-.header-bg .balanca-icone img{
+.header-bg .balanca-icone img {
   left: 50%;
   bottom: -25px;
   position: absolute;
 }
 
+@media (max-width: 800px) {
+  .background {
+    height: 400px;
+  }
+  .background-titulo {
+    justify-self: center;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .background h1 {
+    font-size: calc(1rem + 1.5vw);
+  }
+  .header-bg .balanca-icone img {
+    height: 50px;
+    width: 50px;
+    left: 160px;
+  }
+}
+
 /** Área de Atuação **/
 
 .atuacao {
-  margin-bottom: 160px;
+  margin-bottom: 130px;
+  margin-top: 130px;
 }
 
 .atuacao h1 {
-  margin-top: 130px;
   font-size: 2.5rem;
+  font-family: 'Poppins', sans-serif;
   color: #fb5;
   text-transform: uppercase;
 }
@@ -149,7 +186,7 @@ body {
 .atuacao h1::before {
   content: '';
   display: block;
-  height: 6px;
+  height: 8px;
   width: 60px;
   margin-bottom: 4px;
   background: #fb5;
@@ -161,22 +198,23 @@ body {
   box-shadow: rgba(0, 0, 0, 0.22) 0px 4px 6px;
   margin-top: 60px;
   padding-bottom: 60px;
-  max-width: 1200px;
   margin-left: 100px;
+  max-width: 1400px;
 }
 
 .background-atuacao h2 {
   text-align: center;
   color: #fb5;
   text-transform: uppercase;
-  font-size: 1.5rem;
-  padding-top: 25px;
+  font-size: 1.75rem;
+  font-family: 'Poppins', sans-serif;
+  padding-top: 30px;
 }
 
 .area-container {
   display: grid;
-  grid-template-columns: repeat(4, 165px);
-  gap: 80px;
+  grid-template-columns: repeat(4, 200px);
+  gap: 40px;
   text-align: center;
   flex-wrap: wrap;
   margin-top: 45px;
@@ -190,6 +228,7 @@ body {
 
 .area h3 {
   font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
   padding-bottom: 10px;
   text-transform: uppercase;
   display: block;
@@ -198,32 +237,82 @@ body {
 .area h3::before {
     content: '';
     display: inline-block;
-    text-align: center;
     background-color: #fb5;
     height: 10px;
     width: 4px;
-    border-radius: 4px;
-    margin-right: 8px;
+    margin-right: 6px;
 }
 
 .atuacao .card-area span {
   display: flex;
-  max-width: 165px;
-  height: 140px;
+  max-width: 200px;
+  height: 180px;
   background: #d9d9d9;
   align-items: center;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.22) 0px 4px 6px;
 }
 
-.area .item-7 {
-  top: -10px;
+.atuacao .card-area span img {
+  height: 110px;
+  width: 110px;
+  margin: 0 auto;
 }
 
-.atuacao .card-area span img {
-  height: 100px;
-  width: 100px;
-  margin: 0 auto;
+@media (max-width: 1200px) {
+  .background-atuacao {
+    margin-left: 0px;
+  }
+  .area-container {
+    grid-template-columns: repeat(2, 200px);
+    gap: 80px;
+  }
+}
+
+@media (max-width: 600px) {
+  .area-container {
+    grid-template-columns: 100px 100px;
+    gap: 40px;
+    align-items: center;
+  }
+  .atuacao {
+    margin-top: 80px;
+    margin-bottom: 40px;
+  }
+  .atuacao h1 {
+    font-size: 1.75rem;
+  }
+  .atuacao h1::before {
+    height: 6px;
+    width: 45px;
+  }
+  .background-atuacao h2 {
+    font-size: 1.2rem;
+  }
+  .area h3 {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  .area h3::before {
+    display: none;
+  }
+  .area h3::after{
+    content: '';
+    display: block;
+    background-color: #fb5;
+    height: 4px;
+    width: 10px;
+    margin: 0 auto;
+}
+  .atuacao .card-area span {
+    display: flex;
+    max-width: 100px;
+    height: 80px;
+  }
+  .atuacao .card-area span img {
+    height: 50px;
+    width: 50px;
+  }
 }
 
 /** Sobre **/
@@ -231,20 +320,26 @@ body {
 .sobre {
   background: #141414;
   padding-bottom: 60px;
+  padding-top: 40px;
   box-shadow: inset 0px 80px #292929;
 }
 
-.sobre-container {
-  display: flex;
-  margin-left: 100px;
-  gap: 120px;
-  align-items: center;
+.sobre-bg {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 80px;
+  padding-left: 110px;
+}
+
+.sobre-conteudo {
+  flex-wrap: wrap;
 }
 
 .sobre-conteudo h3 {
   padding-top: 60px;
   margin-bottom: 50px;
-  font-size: 1rem;
+  font-size: 1.75rem;
+  font-family: 'Poppins', sans-serif;
   color: #fb5;
   text-transform: uppercase;
 }
@@ -253,28 +348,32 @@ body {
   content: '';
   display: inline-block;
   background-color: #fb5;
-  height: 12px;
-  width: 4px;
-  border-radius: 4px;
+  height: 18px;
+  width: 6px;
   margin-right: 8px;
 }
 
 .sobre-conteudo p {
   font-size: 1rem;
   color: #fff;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6rem;
   padding-bottom: 20px;
   max-width: 600px;
 }
 
 .sobre-info {
   margin-top: 30px;
+  line-height: 1.2;
 }
 
 .sobre-info p {
   color: #d9d9d9;
   text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
   font-size: 0.75rem;
-  padding: 0px;
+  padding: 0;
+  line-height: 1rem;
   max-width: 800px;
   font-weight: bold;
   opacity: 0.5;
@@ -285,6 +384,23 @@ body {
   color: #fb5;
   font-size: 1rem;
   opacity: 1;
+}
+
+@media (max-width: 1080px) {
+  .sobre-bg {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 0;
+  }
+  .sobre-conteudo h3 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+  .sobre-conteudo p {
+    padding-left: 20px;
+  }
 }
 
 /** Clientes **/

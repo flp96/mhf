@@ -89,17 +89,34 @@ body {
   cursor: pointer;
 }
 
+@media (max-width: 800px) {
+  .header-menu li {
+    padding: 16px;
+  }
+  .header-menu a {
+    background: #292929;
+    border-radius: 4px;
+    padding: 10px 16px;
+  }
+  .header-menu .botao {
+    background: #292929;
+    padding: 10px 18px;
+    color: #fff;
+  }
+  .header-menu .menu-link::after {
+    display: none;
+  }
+}
+
 @media (max-width: 480px) {
   .header img {
     max-height: 50px;
     max-width: 50px;
+    margin: 0 auto;
 }
-  .header-menu .botao{ 
-    padding: 10px 15px;
-  }
   .header-menu li {
     font-size: 1rem;
-    padding: 12px;
+    padding: 30px 10px;
     align-items: center;
   }
 }
@@ -165,7 +182,6 @@ body {
   .header-bg .balanca-icone img {
     height: 50px;
     width: 50px;
-    left: 160px;
   }
 }
 
@@ -211,10 +227,27 @@ body {
   padding-top: 30px;
 }
 
+.background-atuacao a {
+  display: block;
+  padding: 12px 16px;
+  max-width: 250px;
+  margin: 0 auto;
+  font-family: 'Poppins', sans-serif;
+  color: #fb5;
+  font-size: 1.75rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 8px solid #fb5;
+  margin-top: 80px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
 .area-container {
   display: grid;
   grid-template-columns: repeat(4, 200px);
-  gap: 40px;
+  gap: 40px 80px;
   text-align: center;
   flex-wrap: wrap;
   margin-top: 45px;
@@ -288,6 +321,12 @@ body {
   }
   .background-atuacao h2 {
     font-size: 1.2rem;
+  }
+  .background-atuacao a {
+    font-size: 1.2rem;
+    padding: 8px;
+    max-width: 200px;
+    border: 6px solid;
   }
   .area h3 {
     font-size: 0.8rem;

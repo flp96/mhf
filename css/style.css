@@ -477,6 +477,26 @@ body {
   padding: 80px 20px 20px 20px;
 }
 
+.cards-lista::before {
+  content: '';
+  display: inline-block;
+  background: url('/img/arrow-left.png');
+  width: 20px;
+  height: 26px;
+  position: relative;
+  top: 200px;
+}
+
+.cards-lista::after {
+  content: '';
+  display: inline-block;
+  background: url('/img/arrow-right.svg');
+  width: 20px;
+  height: 26px;
+  position: relative;
+  top: 200px;
+}
+
 .cards-lista li {
   max-width: 320px;
   background: #525252;
@@ -486,6 +506,7 @@ body {
   border-radius: 5px;
   padding-top: 60px; 
   padding-bottom: 60px;
+  box-shadow: rgba(0, 0, 0, 0.22) 0px 4px 6px;
 }
 
 .cards-lista img {
@@ -520,4 +541,25 @@ body {
   color: #292929;
   font-weight: bold;
   justify-content: center;
+}
+
+@media (max-width: 1440px) {
+  .cards-lista {
+    gap: 60px;
+  }
+  .cards-lista::before {
+    display: none;
+  }
+  .cards-lista::after {
+    display: none;
+  }
+  .cards-lista li {
+    max-width: 360px;
+  }
+}
+
+@media (max-width: 600px) {
+  .clientes h1 {
+    text-align: end;
+  }
 }

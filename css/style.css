@@ -563,3 +563,83 @@ body {
     text-align: end;
   }
 }
+
+/** FAQ **/
+
+.faq {
+  background: #141414;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  margin-top: 90px;
+}
+
+.faq h1 {
+  font-size: 2.5rem;
+  font-family: 'Poppins', sans-serif;
+  color: #fb5;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+}
+
+.faq h1::before {
+  content: '';
+  display: block;
+  height: 8px;
+  width: 60px;
+  background: #fb5;
+}
+
+.faq-content {
+  position: relative;
+}
+
+.faq-content dl {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.faq-content dt{
+  color: white;
+  background: #525252;
+  font-size: 1.25rem;
+  font-family: 'Poppins', sans-serif;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.faq-content dt::before{
+  content: '';
+  display: inline-block;
+  position: relative;
+  top: 2px;
+  background: #fb5;
+  height: 18px;
+  width: 2px;
+  margin-right: 12px;
+  margin-left: -10px;
+  padding-right: 4px; 
+}
+
+.faq-content dt::after{
+  content: '';
+  display: inline-block;
+  background: url('/img/arrow-down-white.svg');
+  margin-left: 210px;
+  width: 12px;
+  height: 10px;
+}
+
+.faq-content dd {
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  opacity: 50%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.faq-content img {
+  position: absolute;
+  left: 50%;
+  margin-top: 50px;
+}
+

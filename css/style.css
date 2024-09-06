@@ -643,3 +643,20 @@ body {
   margin-top: 50px;
 }
 
+@media (max-width: 630px) {
+  .faq-content dl {
+    max-width: 400px;
+  }
+  .faq-content dt::after {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 440px) {
+  .faq-content dl {
+    max-width: 320px;
+  }
+  .faq-content dt {
+    font-size: 1.15em;
+  }
+}

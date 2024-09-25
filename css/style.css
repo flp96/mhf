@@ -30,7 +30,6 @@ body {
 
 .header-bg {
   background: #141414;
-  
 }
 
 .header {
@@ -162,7 +161,7 @@ body {
 }
 
 .header-bg .balanca-icone img {
-  left: 50%;
+  left: 47%;
   bottom: -25px;
   position: absolute;
 }
@@ -177,7 +176,7 @@ body {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .background h1 {
     font-size: calc(1rem + 1.5vw);
   }
@@ -312,7 +311,7 @@ body {
   }
   .atuacao {
     margin-top: 80px;
-    margin-bottom: 40px;
+    margin-bottom: 0;
   }
   .atuacao h1 {
     font-size: 1.75rem;
@@ -321,10 +320,15 @@ body {
     height: 6px;
     width: 45px;
   }
+  .background-atuacao {
+    padding-bottom: 20px;
+    margin-top: 40px;
+  }
   .background-atuacao h2 {
     font-size: 1.2rem;
   }
   .background-atuacao a {
+    margin-top: 40px;
     font-size: 1.2rem;
     padding: 8px;
     max-width: 200px;
@@ -441,6 +445,13 @@ body {
   }
   .sobre-conteudo p {
     padding-left: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sobre-conteudo h3 {
+    padding-top: 30px;
+    margin-bottom: 30px;
   }
 }
 
@@ -564,6 +575,17 @@ body {
   .clientes h1 {
     font-size: 1.75rem;
     text-align: end;
+    margin-top: 40px;
+    line-height: 2rem;
+  }
+  .clientes h1::before {
+    height: 6px;
+    width: 45px;
+    margin-bottom: 6px;
+  }
+  .cards-lista {
+    padding-top: 40px;
+    gap: 40px;
   }
 }
 
@@ -642,15 +664,22 @@ body {
 
 .faq-content img {
   position: absolute;
-  left: 50%;
+  left: 47%;
   margin-top: 50px;
 }
 
 @media (max-width: 630px) {
+  .faq {
+    padding-top: 40px;
+    margin-top: 40px;
+  }
   .faq h1 {
+    margin-bottom: 40px;
+    line-height: 2rem;
     font-size: 1.75rem;
   }
   .faq h1::before {
+    margin-bottom: 6px;
     height: 6px;
     width: 45px;
   }
@@ -659,6 +688,11 @@ body {
   }
   .faq-content dt::after {
     margin-left: 20px;
+  }
+  .faq-content img {
+    width: 50px;
+    height: 50px;
+    bottom: -130px;
   }
 }
 
@@ -770,7 +804,7 @@ body {
     gap: 10px;
   }
   .info-container p {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
   }
   .info-container span {
     font-size: 0.625rem;
@@ -787,6 +821,7 @@ body {
 
 @media (max-width: 600px) {
   .local h1 {
+    margin-top: 60px;
     font-size: 1.75rem;
   }
   .local h1::before {
@@ -794,13 +829,19 @@ body {
     width: 45px;
   }
   .info-container {
+    max-width: 100%;
     grid-template-columns: 1fr;
+  }
+  .mapa {
+    margin-bottom: 60px;
+  }
+  .mapa img {
+    margin-top: 0px;
   }
   .mapa-contato {
     margin-top: 20px;
     margin-left: 40px;
   }
- 
 }
 
 /** Footer **/
@@ -853,6 +894,7 @@ body {
 
 .redes-footer img {
   padding: 0 20px 0 0;
+  opacity: 60%;
 }
 
 .contato-info h3{
@@ -890,11 +932,23 @@ body {
     grid-template-columns: 1fr;
   }
   .contato-footer {
+    grid-row: 2;
     margin-left: 0;
   }
   .contato-footer {
     flex-wrap: wrap;
   }
  
+}
+
+[data-anime="scroll"] {
+  opacity: 0;
+  transform: translate3d(-30px, 0, 0,);
+  transition: .3s;
+}
+
+[data-anime="scroll"].ativo {
+  opacity: 1;
+  transform: translate3d(0, 0, 0,);
 }
 

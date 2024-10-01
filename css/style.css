@@ -645,15 +645,6 @@ body {
   padding-right: 4px; 
 }
 
-.faq-content dt::after{
-  content: '';
-  display: inline-block;
-  background: url('/img/arrow-down-white.svg');
-  margin-left: 210px;
-  width: 12px;
-  height: 10px;
-}
-
 .faq-content dd {
   color: white;
   font-family: 'Poppins', sans-serif;
@@ -954,6 +945,23 @@ body {
 
 [data-anime="accordion"] dd {
   display: none;
+}
+
+[data-anime="accordion"] dt::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background: url('/img/arrow-down-white.svg') no-repeat center center;
+  margin-left: 200px;
+  transition: transform .3s;
+  width: 12px;
+  height: 10px;
+}
+
+[data-anime="accordion"] dt.ativo::after {
+  content: '';
+  transform: rotate(-180deg);
 }
 
 [data-anime="accordion"] dd.ativo {

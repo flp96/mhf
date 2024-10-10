@@ -548,6 +548,34 @@ body {
   justify-content: center;
 }
 
+.arrow-nav {
+  display: flex;
+  justify-content: center;
+  gap: 90px;
+}
+
+.arrow-nav .prev {
+  content: '';
+  background: url('/img/arrow-right.svg') no-repeat center;
+  border-radius: 50%;
+  border: 3px solid #141414;
+  width: 50px;
+  height: 50px;
+  rotate: 180deg;
+  cursor: pointer;
+}
+
+.arrow-nav .next {
+  content: '';
+  background: url('/img/arrow-right.svg') no-repeat center;
+  border-radius: 50%;
+  border: 3px solid #141414;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+
 @media (max-width: 1440px) {
   .slide {
     gap: 60px;

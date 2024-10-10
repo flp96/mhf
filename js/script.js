@@ -1,10 +1,11 @@
 import ScrollSuave from './modules/scroll-suave.js';
 import AnimaScroll from './modules/anima-scroll.js';
 import Accordion from './modules/accordion.js';
-import Slide from './modules/slide.js';
+import SlideNav from './modules/slide.js';
 
-const slide = new Slide('.slide', '.slide-wrapper');
+const slide = new SlideNav('.slide', '.slide-wrapper');
 slide.init();
+slide.addArrow('.prev', '.next');
 
 const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]');
 scrollSuave.init();

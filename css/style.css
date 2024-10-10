@@ -481,45 +481,25 @@ body {
 
 .cards-lista {
   display: flex;
-  gap: 90px;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-  overflow-x: auto;
-  flex-wrap: wrap;
-  padding: 80px 20px 20px 20px;
-}
-
-.cards-lista::before {
-  content: '';
-  display: inline-block;
-  background: url('/img/arrow-left.png');
-  width: 20px;
-  height: 26px;
-  position: relative;
-  top: 200px;
-}
-
-.cards-lista::after {
-  content: '';
-  display: inline-block;
-  background: url('/img/arrow-right.svg');
-  width: 20px;
-  height: 26px;
-  position: relative;
-  top: 200px;
 }
 
 .cards-lista li {
   max-width: 320px;
+  flex-shrink: 0;
   background: #525252;
   font-family: 'Poppins', sans-serif;
   text-align: center;
   font-size: 1rem;
+  margin: 60px 20px;
+  overflow: hidden;
   border-radius: 5px;
   padding-top: 60px; 
   padding-bottom: 60px;
   box-shadow: rgba(0, 0, 0, 0.22) 0px 4px 6px;
+}
+
+.slide-wrapper {
+  overflow: hidden;
 }
 
 .cards-lista img {
@@ -979,4 +959,5 @@ body {
     opacity: 1;
   }
 }
+
 

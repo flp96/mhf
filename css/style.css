@@ -551,7 +551,7 @@ body {
 .arrow-nav {
   display: flex;
   justify-content: center;
-  gap: 90px;
+  gap: 130px;
 }
 
 .arrow-nav .prev {

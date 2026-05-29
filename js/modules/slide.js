@@ -136,7 +136,7 @@ export class Slide {
     this.transition(true);
     this.addSlideEvents();
     this.slidesConfig();
-    this.changeSlide(3);
+    this.changeSlide(0);
     this.addResizeEvent();
     return this;
   }

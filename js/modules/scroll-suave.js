@@ -11,10 +11,12 @@ export default class ScrollSuave {
   }
 
   scrollToSection(event) {
-    event.preventDefault();
     const href = event.currentTarget.getAttribute('href');
     const section = document.querySelector(href);
-    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (section) {
+      event.preventDefault();
+      section.scrollIntoView(this.options);
+    }
   }
 
   addLinkEvent() {
